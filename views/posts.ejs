@@ -5,11 +5,14 @@
     <%- include('imports'); -%>
   </head>
   <body>
+    <% var active = "Posts"; %>
     <%- include('navbar'); -%>
     
     <div class="container">
       <div class="row">
-        <h1>Home</h1>
+        <% posts.forEach((post) => { %>
+          <%- include('post_card', { post: post }); -%>
+        <% }); %>
       </div>
     </div>
 
