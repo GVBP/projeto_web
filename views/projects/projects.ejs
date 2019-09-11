@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <%- include('../pageStruct/imports'); -%>
+</head>
+
+<body>
+    <%- include('../pageStruct/navbar'); -%>
+
+    <div class="container">
+        <div class="row">
+            <% projects.forEach((project) => { %>
+            <%- include('project_card', { project: project }); -%>
+            <% }); %>
+        </div>
+    </div>
+
+</body>
+
+</html>
