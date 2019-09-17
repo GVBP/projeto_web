@@ -13,11 +13,10 @@
         <div class="row">
 
             <div class="post-detail">
-                <img src="" />
                 <h1><%= job.name %></h1>
-                <p><%= job.desc %></p>
-                <p><%= job.min_exp_time %></p>
-                <p><%= job.salary_amount %></p>
+                <p><strong>Descrição da Vaga</strong>: <%= job.desc %>.</p>
+                <p><strong>Tempo de Experiência</strong>: <%= job.min_exp_time %>.</p>
+                <p><strong>Salário</strong>: R$ <%= job.salary_amount %>.</p>
             </div>
 
 
