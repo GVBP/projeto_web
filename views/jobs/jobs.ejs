@@ -3,16 +3,16 @@
 
 <head>
     <title><%= title %></title>
-    <%- include('imports'); -%>
+    <%- include('../pageStruct/imports'); -%>
 </head>
 
 <body>
-    <%- include('navbar'); -%>
+    <%- include('../pageStruct/navbar'); -%>
 
     <div class="container">
         <div class="row">
-            <% projects.forEach((project) => { %>
-            <%- include('project_card', { project: project }); -%>
+            <% jobs.forEach((job) => { %>
+            <%- include('job_card', { job: job }); -%>
             <% }); %>
         </div>
     </div>

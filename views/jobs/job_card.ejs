@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+    <img src="" class="card-img-top">
+    <div class="card-body">
+        <h1 class="card-title">
+            <%= job.name %>
+        </h1>
+        <p class="card-text">
+            <p><strong>Descrição da Vaga</strong>: <%= job.desc %>.</p>
+            <p><strong>Tempo de Experiência</strong>: <%= job.min_exp_time %>.</p>
+            <p><strong>Salário</strong>: R$ <%= job.salary_amount %>,00.</p>
+        </p>
+        <a href="/jobs/<%= job.id %>" class="btn btn-primary">Ler mais</a>
+    </div>
+</div>
