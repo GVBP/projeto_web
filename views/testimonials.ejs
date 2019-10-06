@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <%- include('pageStruct/imports'); -%>
+</head>
+
+<body>
+    <%- include('pageStruct/navbar'); -%>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <h1><%= title %></h1>
+        </div>
+        <% testimonials.forEach((item) => { %>
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p><%= item.testimony %></p>
+                    <footer class="blockquote-footer">
+                        <%= item.name %> (<%= item.title %>) - <%= item.company %>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+
+</body>
+
+</html>
