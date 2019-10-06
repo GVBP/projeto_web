@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <%- include('../../pageStruct/imports'); -%>
+</head>
+
+<body>
+    <%- include('../../pageStruct/navbar'); -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><%= title %></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <form action="create" method="POST">
+                    <div class="form-group">
+                        <label for="testimonyName">Nome</label>
+                        <input name="name" type="text" class="form-control" id=testimonyName"
+                            placeholder="Nome do Usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="testimonyCompany">Empresa</label>
+                        <input name="company" type="text" class="form-control" id="testimonyCompany"
+                            placeholder="Nome da Empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="testimonyTitle">Título</label>
+                        <input name="title" type="text" class="form-control" id="testimonyTitle"
+                            placeholder="Título do Depoimento">
+                    </div>
+                    <div class="form-group">
+                        <label for="testimonyBody">Depoimento</label>
+                        <textarea name="testimony" type="text" class="form-control" id="testimonyBody"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,32 +1,30 @@
+var fs = require('fs');
 
-var getProjects = function() {
-    var projects = [
-      {
-        id: 1,
-        name: 'Project 1',
-        image: 'post1.jpg',
-        subject: 'Meu primeiro post',
-        description: 'Meu primeiro post bla blaa sdfa sdfas df asdf asdf asdf asdf'
-      },
-      {
-        id: 2,
-        name: 'Project 2',
-        image: 'post2.jpg',
-        subject: 'Meu segundo post',
-        description: 'Meu segundo post bla bla asd f 2'
-      },
-      {
-        id: 3,
-        name: 'Sistema automatico de projects',
-        image: 'post2.jpg',
-        subject: 'Server Side',
-        description: 'Esse é o novo sistema do blog da Católica de SC'
-      }
-    ];
-  
-    return projects;
-  }
-  
-  module.exports = {
-    getProjects: getProjects
-  }
+var projectsFilePath = "db/projects.json";
+
+var loadFileProjects = function () {
+  var fileProjects = fs.readFileSync(projectsFilePath, "UTF-8");
+  var projects = JSON.parse(fileProjects);
+  return projects;
+}
+
+var saveFileProjects = function (projects) {
+  var data = JSON.stringify(projects);
+  fs.writeFileSync(projectsFilePath, data, 'utf8');
+}
+
+var getProjects = function () {
+  var projects = loadFileProjects();
+  return projects;
+}
+
+var saveProject = function (newProject) {
+  var projects = loadFileProjects();
+  projects.push(newProject);
+  saveFileProjects(projects);
+}
+
+module.exports = {
+  getProjects: getProjects,
+  saveProject: saveProject
+}

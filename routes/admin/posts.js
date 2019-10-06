@@ -16,8 +16,7 @@ router.get('/', function(req, res, next) {
 router.get('/create', function(req, res, next) {
 
     var data = {
-        title: "Novo Post"//,
-        //posts: posts
+        title: "Novo Post"
     };
 
     res.render('admin/posts/create', data);
