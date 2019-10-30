@@ -25,7 +25,6 @@ router.get('/create', function(req, res, next) {
 });
 
 router.post('/create', uploader.single('image'), function(req, res, next) {
-    console.log("Salvar Products");
     var products = productsService.getProducts();
 
     var newId = products.length + 1;
