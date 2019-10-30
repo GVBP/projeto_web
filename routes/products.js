@@ -10,12 +10,8 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET productId page. */
-router.get('/:productId', function (req, res, next) {
-    var productId = req.params.productId;
-    var products = productsService.getProducts();
-    var product = products.filter((product) => product.id == productId)[0];
-
-    res.render('products/product', { title: product.name, product: product });
+router.get('/listBuy', function (req, res, next) {
+    res.render('products/listBuy', { title: 'Página em Construção' });
 });
 
 module.exports = router;
