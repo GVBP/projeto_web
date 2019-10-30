@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <%- include('../../pageStruct/imports'); -%>
+</head>
+
+<body>
+    <%- include('../../pageStruct/navbar'); -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><%= title %></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <form action="create" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="productName">Nome</label>
+                        <input name="name" type="text" class="form-control" id="productName"
+                            placeholder="Nome do Produto">
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">Descrição</label>
+                        <textarea name="description" type="text" class="form-control"
+                            id="productDescription"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Preço do Produto</label>
+                        <input name="productPrice" type="number" class="form-control" id="productPrice"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">Imagem</label>
+                        <input type="file" name="image" type="text" class="form-control" id="productImage"
+                            placeholder="Imagem do Produto">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -25,6 +25,7 @@ router.get('/create', function(req, res, next) {
 });
 
 router.post('/create', uploader.single('image'), function(req, res, next) {
+    console.log("Salvar Posts");
     var posts = postsService.getPosts();
 
     var newId = posts.length + 1;
@@ -36,7 +37,9 @@ router.post('/create', uploader.single('image'), function(req, res, next) {
     newPost.description = req.body.description;
     newPost.body = req.body.postBody;
 
+    console.log("Salvar Posts2");
     postsService.savePost(newPost);
+    console.log("Salvar Posts3");
     
     res.redirect('/admin/posts');
 });

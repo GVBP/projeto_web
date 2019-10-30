@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Produto Teste",
+        "description": "Meu primeiro produto",
+        "price": 50,
+        "image": "post1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Produto Teste 2",
+        "description": "Meu segundo produto",
+        "price": 100,
+        "image": "post1.jpg"
+    }
+]
